@@ -4,8 +4,5 @@
 #include <iostream>
 #include <thread>
 
-
-#include "mat2x2.h"
-
 //proto
-long fib(int n);
+__int64 fib(int n);

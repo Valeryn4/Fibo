@@ -1,4 +1,6 @@
+
 #include "header.h"
+#include "mat2x2.h"
 
 using namespace std;
 
@@ -6,8 +8,6 @@ void thread_f1(int i);
 void thread_f2(int i);
 
  
-
-
 int main(void)
 {
 	int i;
@@ -18,7 +18,7 @@ int main(void)
 	thread thr1(thread_f1, i);
 	cout << "Start thread #2" << endl;
 	thread thr2(thread_f2, i);
-	
+
 
 	thr1.join();
 	thr2.join();
@@ -36,7 +36,8 @@ void thread_f1(int i) {
 
 void thread_f2(int i) {
 	__int64 temp;
-	temp = fib_adv(i);
+	Fab fib;
+	temp = fib.fibm(i);
 	cout << "\nAdvanced Fibanachi function fib_adv(i)";
-	cout << "\n fib_adv(i) " << fib_adv(i);
+	cout << "\n fib_adv(i) " << temp;
 }

@@ -1,17 +1,12 @@
 #pragma once
 
 class Fab {
-private:
-	
 public:
 	Fab();
-	~Fab();
 	__int64 fibm(short n); //start
 	struct mtx2x2 { __int64 _11 = 0, _12 = 0, _21 = 0, _22 = 0; };
 	friend mtx2x2 operator*(Fab::mtx2x2 lhs, Fab::mtx2x2 rhs);
 	mtx2x2 IntPower(mtx2x2 x, short power);
-
-
 private:
 	mtx2x2 fibMtx;
 	mtx2x2 identity;
@@ -25,7 +20,6 @@ Fab::Fab() {
 	identity._11 = 1;
 	identity._22 = 1;
 }
-Fab::~Fab() {}
 
 Fab::mtx2x2 operator*(Fab::mtx2x2 lhs, Fab::mtx2x2 rhs) {
 	Fab::mtx2x2 out;
